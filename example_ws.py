@@ -1,6 +1,6 @@
 # Basic import
-from gephistreamer import graph
-from gephistreamer import streamer
+from GS import graph
+from GS import streamer
 
 import itertools
 import random
@@ -12,7 +12,7 @@ stream = streamer.Streamer(streamer.GephiWS())
 test =  [x for x in itertools.permutations('ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890', 2) ]
 random.shuffle(test)
 for source, target in test:
-    
+
     node_source = graph.Node(source)
     node_target = graph.Node(target)
 
@@ -21,5 +21,3 @@ for source, target in test:
     stream.add_edge(graph.Edge(node_source,node_target))
 
 time.sleep(1) #It might be possible the script runs too fast and last action anr't sent properly
-
-

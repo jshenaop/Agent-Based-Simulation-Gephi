@@ -1,6 +1,6 @@
 # Basic import
-from gephistreamer import graph
-from gephistreamer import streamer
+from GS import graph
+from GS import streamer
 
 # Create a Streamer
 # adapt if needed : streamer.GephiREST(hostname="localhost", port=8080, workspace="workspace0")
@@ -19,7 +19,7 @@ node_b.property['custom_property']=2
 # stream.add_node(*l)
 stream.add_node(node_a,node_b)
 
-# Create edge 
+# Create edge
 # You can also use the id of the node :  graph.Edge("A","B",custom_property="hello")
 edge_ab = graph.Edge(node_a,node_b,custom_property="hello")
 stream.add_edge(edge_ab)
